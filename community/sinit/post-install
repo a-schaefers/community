@@ -11,11 +11,8 @@ IMPORTANT:
 
         Please keep in mind that sinit does not use
         the /etc/inittab file. The default busybox
-        runit service supervisor will still be
-        initialized. To use a different supervisor,
-        edit /etc/rc.conf and place script(s) in
-        the /etc/rc.d/ directory suffixed with
-        *.sh
+        runit service supervisor may (optionally)
+        still be initialized.
 
         The following /etc/rc.conf default config
         options are provided by this package and
@@ -29,23 +26,8 @@ USAGE:
 
         -> # kill -s USR1 1
 
-        Advanced users may place in /etc/sinit.d/
-        a "rc.shutdown" file which will be sourced
-        instead of /lib/init/rc.shutdown
-
         To reboot:
 
         -> # kill -s INT 1
-
-        Users may opt to install the above commands
-        as scripts in /usr/local/bin and modify it
-        to the front of 'PATH'.
-
-NOTE:
-        In the future this [lack of poweroff and
-        reboot scripts in /bin] may change if kiss
-        gains slotting abilities or if busybox
-        becomes optional. Another possibility is
-        a suckless overlay with a forked busybox.
 
 EOF

@@ -1,4 +1,4 @@
-# needed by sinit because sinit does not use /etc/inittab
+# This is a module for sinit users to start a getty
 if [ "$SINIT_ENABLE_GETTY" = 1 ]; then
     sh -c 'ubase-box respawn ubase-box getty /dev/tty1 linux' &>/dev/null &
     sh -c 'ubase-box respawn ubase-box getty /dev/tty2 linux' &>/dev/null &
